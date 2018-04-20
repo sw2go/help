@@ -1,0 +1,56 @@
+Prerequisits:
+-------------
+
+- Installation Node und NPM: https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm
+  npm -v  ( Test ) 
+
+- Installation TypeScript, Visual Studio > Tools > Extensions and Updates... > «Online» auswählen >
+    Im Suchfeld «TypeScript» eintippen > Den Eintrag «TypeScript 2.4.1 for Visual Studio ...» suchen, markieren, downloaden und ausführen
+	
+- Installation Angular CLI: 
+  npm install -g @angular/cli
+  ng version  (test)
+
+
+Neues Projekt:
+--------------
+
+VS: Templates > Other Languages > TypeScript -> HTML Application with TypeScript
+    Name:      MyFirst.Web.Client
+    Location:  C:\@Local
+    Solution:  AngularSchulung
+
+VS: im neuen Projekt alle Defaultdateien löschen ( app.css, app.ts, index.html, web.config )
+
+VS: schliessen
+
+cd C:\@Local\AngularSchulung
+ng new MyFirst.Web.Client --routing true --style scss ( dies erzeugt alle nötigen Dateien und Ordner im Projekt )
+
+VS: alle Dateien einblenden und alles ausser "node_modules", "bin" und "obj" -> "Include in Project"
+    dann die Nicht-Projekt-Dateien wieder ausblenden
+    Hinweis für Phobiker, ggf. am Ende der Entwicklung "node_modules" auch sichern 
+
+cd C:\@Local\AngularSchulung\MyFirst.Web.Client
+ng serve -o  ( startet MyFirst.Web.Client im Entwicklungswebserver -> Browser: localhost:4200 )
+
+Add Bootstrap:
+--------------
+Unter https://www.npmjs.com/ bootstrap suchen ... Name und Version merken 
+VS: package.json ... unter "devDependencies" ... "bootstrap": "^4.0.0" hinzufügen  
+... dann im VS Restore Packages oder cd C:\@Local\AngularSchulung\MyFirst.Web.Client und npm install  
+
+VS: src/styles   ... @import '../node_modules/bootstrap/scss/bootstrap';
+
+Neue Component:
+cd C:\@Local\AngularSchulung\MyFirst.Web.Client\src\app
+
+
+
+
+
+  
+
+
+
+
