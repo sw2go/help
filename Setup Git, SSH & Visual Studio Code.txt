@@ -1,6 +1,8 @@
 Normal Setup
 ------------
 download & install visual source code
+ - command palette "Sprache konfigurieren" i.e. "locale":"en-US" 
+
 download & install git and set following Options:
  - use visual source code as git default editor
  - use git from the windows command prompt
