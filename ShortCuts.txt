@@ -1,0 +1,4 @@
+ShortCuts
+---------
+
+tab, to complete path or display options in cmd
