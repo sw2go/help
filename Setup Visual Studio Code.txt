@@ -1,0 +1,11 @@
+Normal Setup on Windows
+-----------------------
+download & install visual source code
+ - command palette "Sprache konfigurieren" i.e. "locale":"en-US" 
+
+download & setup git and ssh
+ 
+open folder C:\@github\help from visual source code
+change files, save stage and commit from the Explorer-Tab then use
+View > Command Palette for > Git: Pull or Push
+
