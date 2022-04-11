@@ -31,9 +31,12 @@ go to the folder where you want the local repository to be created
 > cd C:\MyRepositories
 > git clone ssh://git@github.com/sw2go/help.git    ... this creates the repository 'help' in a subfolder
 
+https vs. ssh
+-------------
 if you cloned by accident with the https url, i.e. https://github.com/sw2go/help.git
-cloning works, because the repository is a public one, but pushing would fail.
-To use ssh, go into the local repository folder and set the remote origin to the ssh-url
+cloning works, because the repository is a public one, but pushing will fail.
+To use ssh, get the ssh-url of your online repository at github.com or dev.azure.com (see "clone" url) 
+Then go into the local repository folder and set the remote origin to the ssh-url you found online.
 > git remote set-url origin ssh://git@github.com/sw2go/help.git  ... or edit ./git/config manually
 
 normally one id_rsa per user and computer is sufficient.
