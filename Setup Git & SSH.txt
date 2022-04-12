@@ -43,6 +43,11 @@ normally one id_rsa per user and computer is sufficient.
 if your PC gets stolen or you throw it away just remove the public key from the github account. 
 
 
+setup git server on windows
+---------------------------
+https://medium.com/@piteryo7/how-to-set-up-git-server-on-local-network-windows-tutorial-7ec5cd2df3b1
+
+
 different ssh-keys and custom settings for some hosts
 -----------------------------------------------------
 if you want or must use more than one sshKey here is how to do it:
