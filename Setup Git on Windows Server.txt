@@ -1,0 +1,29 @@
+Setup git repo on a windows server
+----------------------------------
+mkdir C:\GitRemote                    ... create a folder for all git remote repositories on the server
+cd    C:\GitRemote                    ... go into this "git server" folder
+git init myproject.git --bare         ... create a empty repository named: myproject
+
+Initialize repo from windows client
+-----------------------------------
+mkdir C:\GitLocal
+cd C:\GitLocal
+git clone C:\GitRemote\myproject.git  ... clone the remote repo locally
+
+cd C:\GitLocal\myproject              ... go into the local repo folder
+git status                            ... git says: "On branch main" and "No commits yet" 
+
+Now you can add any project folders and files to the local folder "myproject" as well as a .gitignore file
+to "initialize" the repository with content.
+
+git add -A                            ... to add/stage the files and folders
+git commit -m "initial commit"        ... to commit the changes 
+git push                              ... to push the local commit to the remote repository
+
+Use repo after initialization
+-----------------------------
+git clone C:\GitRemote\myproject.git  ... clone the remote repo locally (only if not jet done)
+cd C:\GitLocal\myproject              ... go into the local repo folder
+
+git checkout main                     ... checkout branch named "main"
+git pull                              ... pull latest changes on main from remote
