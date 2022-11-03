@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "ts-watch": "tsc --watch",
+    "cp-clean": "copy-and-watch --clean src/**/*.{html,css} dist/",
+    "cp-watch": "copy-and-watch --watch src/**/*.{html,css} dist/",
+    "dev": "npm-run-all --parallel ts-watch cp-watch",
+    "build": "npm run cp-clean && tsc --build"
+  },
+  "devDependencies": {
+    "copy-and-watch": "latest",
+    "npm-run-all": "latest",
+    "typescript": "latest"
+  }
+}

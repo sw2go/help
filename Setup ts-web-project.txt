@@ -1,0 +1,44 @@
+How to setup a environment in VS-Code with Live Server 
+for a debuggable typescript web-project
+------------------------------------------------------
+
+Just copy and rename the folder "ts-web-project-template" to "your-project-folder", 
+then run "npm install" to use the template as a starting point for your project, 
+or do the following set by step:
+
+1. Open VSCode and goto your project folder
+cd /myproject                               
+
+2. Create a npm package file with scripts for build and dev
+package.json                                
+{
+  "scripts": {
+    "ts-watch": "tsc --watch",
+    "cp-clean": "copy-and-watch --clean src/**/*.{html,css} dist/",
+    "cp-watch": "copy-and-watch --watch src/**/*.{html,css} dist/",
+    "dev": "npm-run-all --parallel ts-watch cp-watch", 
+    "build": "npm run cp-clean && tsc --build"
+  }
+}
+
+3. Install npm packages required for developing/tooling
+npm install typescript       --save-dev     ... typescript compiler "tsc"
+npm install copy-and-watch   --save-dev     ... helper for watching & copying non-ts files
+npm install npm-run-all      --save-dev     ... helpers for "watching all files"
+
+4. Create and edit a typescript-config file
+npx tsc --init                              ... to create a default tsconfig.json
+"outDir": "./dist"                          ... set outDir in tsconfig.json 
+"sourceMap": true                           ... set sourceMap, it is required for debugging
+
+5. Create a folder an add source-files
+mkdir src                                   ... create a folder for source files *.html, *.css and *.ts
+
+6. Build the project or run in development-mode (build and copy to dist whenever a file in src changes)
+npm run build                               ... clean dist copy files and transpile *.ts
+npm run dev                                 ... watch for changes in src and copy/transpile changed files to dist
+
+7. Run Live-Server to see the running page 
+Install Live Server Extension in VS-Code    ... in Extension Settings set Custom Browser to "chrome" and Port to "4200"
+To run Live Server                          ... select index.html in dist, right-click and click "Open with Live Server" 
+                                                or click "Go Live" in VS-Code Status-Bar
