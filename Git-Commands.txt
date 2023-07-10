@@ -1,0 +1,18 @@
+git clone ssh://.../repo.git
+cd repo
+
+git status
+git branch
+
+git checkout <branch-name>                    ... switch branch
+
+git add -A                                    ... add 
+git commit -m "..."                           ... commit local
+git push                                      ... push to remote
+
+git branch -d <branch-name>                   ... delete local  branch 
+git push --delete origin <branch-name>        ... delete remote branch
+
+
+git reset "HEAD^"                             ... when you started work on the wrong branch
+git checkout <branch-name>                    ... then switch to the correct branch
