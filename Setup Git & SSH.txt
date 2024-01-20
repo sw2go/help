@@ -15,7 +15,8 @@ download & install git and set following Options:
  - no credential manager
  
 set a global git username  ( saved to ~/.gitconfig )
-> git config --global user.name aa 
+> git config --global user.name sw2go
+> git config --global user.email aa@aa 
 
 to create a default (id_rsa) sshKey run Git Bash
 $ ssh-keygen -t rsa -C yourname@yourcomputer ... (you can use any mail-address-like string)  
