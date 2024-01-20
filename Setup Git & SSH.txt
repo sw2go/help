@@ -16,7 +16,7 @@ download & install git and set following Options:
  
 set a global git username  ( saved to ~/.gitconfig )
 > git config --global user.name sw2go
-> git config --global user.email aa@aa 
+> git config --global user.email myEmailAtGitHub  
 
 to create a default (id_rsa) sshKey run Git Bash
 $ ssh-keygen -t rsa -C yourname@yourcomputer ... (you can use any mail-address-like string)  
