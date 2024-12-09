@@ -1,0 +1,12 @@
+To handle several node-versions use nvm for windows.
+https://github.com/coreybutler/nvm-windows
+
+nvm -v                 ... show installed version of nvm
+
+nvm ls                 ... list all available npm version
+
+nvm current            ... show current npm version
+
+nvm install 18.16.1    ... install specific npm version
+
+nvm use 18.16.1        ... switch to specific npm version
