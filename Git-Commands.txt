@@ -1,4 +1,4 @@
-git clone ssh://.../repo.git
+git clone git@github.com:sw2go/help.git       ... to clone this repo named "help"
 cd repo
 
 git status
