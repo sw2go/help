@@ -10,3 +10,20 @@ nvm current            ... show current npm version
 nvm install 18.16.1    ... install specific npm version
 
 nvm use 18.16.1        ... switch to specific npm version
+
+
+If you need a specific node (npm) version in a project:
+
+Go to the project folder, there where you find the package.json i.e. ClientApp
+Switch to or install and switch to the required node version by using nvm
+Next ensure that the projects node modules are in sync with package.json 
+
+npm install            ... this updates the content of the node_modules folder
+
+to run a script defined in package.json call
+
+npm run <scriptname>   ... you can also pass additional parameter i.e.
+
+npm run ng serve       ... this calls the npm script "ng" that calls node "ng" 
+                           defined in angular-cli with the argument "serve"
+                           
